@@ -15,18 +15,26 @@ a = 123
 # %f 浮点数占位符
 # %d 整数占位符
 b = 'Hello %s'%'孙悟空'
+print(b)
 b = 'hello %s 你好 %s'%('tom','孙悟空')
-b = 'hello %3.5s'%'abcdefg' # %3.5s字符串的长度限制在3-5之间
-b = 'hello %s'%123.456
-b = 'hello %.2f'%123.456
-b = 'hello %d'%123.95
+print(b)
+b = 'hello %3.5s'%'abcdefg' # %3.5s字符串的长度限制在3-5之间,hello abcde
+print(b)
+b = 'hello %s'%123.456#
+print(b)
+b = 'hello %.2f'%123.456# hello 123.46，保留2位小数
+print(b)
+b = 'hello %d'%123.95# hello 123
+print(b)
 b = '呵呵'
+print(b)
 
-# print('a = %s'%a)
+print('a = %s'%a)# a = 123
 
 # 格式化字符串，可以通过在字符串前添加一个f来创建一个格式化字符串
 # 在格式化字符串中可以直接嵌入变量
 c = f'hello {a} {b}'
+print(c)# hello 123 呵呵
 
 print(f'a = {a}')
 
