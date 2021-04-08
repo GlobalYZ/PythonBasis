@@ -43,7 +43,7 @@ def make_averager():
 
     return averager
 
-averager = make_averager()
+averager = make_averager()# 此avergaer对应的是下面调用的averager
 
 print(averager(10))
 print(averager(20))

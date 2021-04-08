@@ -19,10 +19,12 @@ a = 5 * 5
 
 a = 10 / 5
 a = 5 / 2
+print(a)# 2.5
 # a = 5 / 0 ZeroDivisionError: division by zero
 a = 10 / 3
 a = 10 // 3
-a = 5 // 2 
+a = 5 // 2 # //是整除，得到2
+print(a)#
 
 a = 2 ** 2
 a = 10 ** 5

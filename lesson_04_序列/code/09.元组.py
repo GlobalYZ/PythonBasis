@@ -15,7 +15,7 @@ my_tuple = (1,2,3,4,5) # 创建了一个5个元素的元组
 # print(my_tuple[3])
 
 # 当元组不是空元组时，括号可以省略
-# 如果元组不是空元组，它里边至少要有一个,
+# 如果元组不是空元组，它里边至少要有一个,逗号，如果没有这个逗号，就成为一个int型了
 my_tuple = 10,20,30,40
 my_tuple = 40,
 # print(my_tuple , type(my_tuple))
@@ -47,8 +47,8 @@ my_tuple = 10 , 20 , 30 , 40
 a , b , *c = my_tuple
 a , *b , c = my_tuple
 *a , b , c = my_tuple
-a , b , *c = [1,2,3,4,5,6,7]
-a , b , *c = 'hello world'
+a , b , *c = [1,2,3,4,5,6,7] # 也可以对列表进行解包
+a , b , *c = 'hello world'# 也可以对序列进行解包
 # 不能同时出现两个或以上的*变量
 # *a , *b , c = my_tuple SyntaxError: two starred expressions in assignment
 print('a =',a)

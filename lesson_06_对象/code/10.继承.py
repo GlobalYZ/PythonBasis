@@ -38,7 +38,7 @@ class Dog(Animal):
 
     @age.setter    
     def age(self,age):
-        self._age = name        
+        self._age = age
 
 d = Dog('旺财',18) 
 

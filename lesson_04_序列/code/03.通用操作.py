@@ -32,6 +32,6 @@ arr = [10,1,2,5,100,77]
 # index()的第二个参数，表示查找的起始位置 ， 第三个参数，表示查找的结束位置
 # print(stus.index('沙和尚',3,7))
 # 如果要获取列表中没有的元素，会抛出异常
-# print(stus.index('牛魔王')) ValueError: '牛魔王' is not in list
+# print(stus.index('牛魔王')) ValueError: '牛魔王' is no t in list
 # s.count() 统计指定元素在列表中出现的次数
 print(stus.count('牛魔王'))

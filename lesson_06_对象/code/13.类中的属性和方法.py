@@ -59,6 +59,7 @@ a = A()
 
 # A.test_2() 等价于 a.test_2()
 
+A.test_2()
 A.test_3()
 a.test_3()
 
