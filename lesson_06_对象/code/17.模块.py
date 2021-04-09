@@ -18,7 +18,7 @@ def test2():
 # from m import Person
 # from m import test
 # from m import Person,test
-# from m import * # 引入到模块中所有内容，一般不会使用
+# from m import * # 引入到模块中所有内容，一般不会使用，有相同名称的会覆盖掉
 # p1 = Person()
 # print(p1)
 # test()
@@ -31,8 +31,11 @@ def test2():
 # test2()
 # new_test2()
 
-from m import *
-# print(_c)
+# import m # 这样引入还能访问隐藏的_c
+# print(m._c)
+from m import * # 这样引入就无法访问了
+print(_c)
+
 
 # import xxx
 # import xxx as yyy
