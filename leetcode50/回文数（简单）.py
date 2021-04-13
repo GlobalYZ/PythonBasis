@@ -20,5 +20,22 @@
 # 进阶：你能不将整数转为字符串来解决这个问题吗？
 class Solution:
     def isPalindrome(self, x: int) -> bool:
-        s = 12
-        return
+        if x < 0:
+            return False
+        div = 1
+        while x / div >= 10:
+            div = div * 10
+        while x > 0:
+            leftNum = x // div
+            rightNum = x % 10
+            if leftNum != rightNum:
+                return False
+            x = (x % div) // 10# 要用双杠除，无余数
+            div = div // 100# 要用双杠除，无余数
+        return True
+
+
+test = Solution()
+print(test.isPalindrome(0))
+
+print(1221 % 10)
