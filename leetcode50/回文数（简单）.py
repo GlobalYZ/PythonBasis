@@ -20,4 +20,5 @@
 # 进阶：你能不将整数转为字符串来解决这个问题吗？
 class Solution:
     def isPalindrome(self, x: int) -> bool:
+        s = 1
         return
