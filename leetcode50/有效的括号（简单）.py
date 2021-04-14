@@ -25,10 +25,13 @@
 class Solution:
     def isValid(self, s: str) -> bool:
         while "()" in s or "[]" in s or "{}" in s:
-            s = s.replace("()", "")
+            s = s.replace("()", "")# replace的变换，如果没有需要更换的，则会返回原字符串
             s = s.replace("[]", "")
             s = s.replace("{}", "")
         return s == ""
 
 test = Solution()
 print(test.isValid("([{}])"))
+testReplace = "222"
+testReplace = testReplace.replace("{","")
+print(testReplace)
