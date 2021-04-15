@@ -40,3 +40,7 @@ class Solution:
 
         return len(nums)
 
+test = Solution()
+l = [1,2,2,3,3,3,6,6,7,8]
+n = test.removeDuplicates(l)
+print(n)

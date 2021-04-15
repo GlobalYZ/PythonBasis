@@ -1,4 +1,7 @@
 # 创建几个函数
+from functools import wraps
+from textwrap import wrap
+
 
 def add(a , b):
     '''
@@ -59,7 +62,7 @@ def begin_end(old):
             old 要扩展的函数对象
     '''
     # 创建一个新函数
-    def new_function(*args , **kwargs):
+    def new_function1(*args , **kwargs):
         print('begin_end开始执行~~~~')
         # 调用被扩展的函数
         result = old(*args , **kwargs)
@@ -68,7 +71,7 @@ def begin_end(old):
         return result
 
     # 返回新函数        
-    return new_function
+    return new_function1
 
 f = begin_end(fn)
 f2 = begin_end(add)
@@ -92,7 +95,8 @@ def fn3(old):
             old 要扩展的函数对象
     '''
     # 创建一个新函数
-    def new_function(*args , **kwargs):
+    # @wrap(old)
+    def new_function2(*args , **kwargs):
         print('fn3装饰~开始执行~~~~')
         # 调用被扩展的函数
         result = old(*args , **kwargs)
@@ -101,11 +105,13 @@ def fn3(old):
         return result
 
     # 返回新函数        
-    return new_function
+    return new_function2
 
 @fn3
 @begin_end
 def say_hello():
     print('大家好~~~')
 
+print('下面是根据runoob上学来的验证函数本身的调用类型type，在没加@wrap的包裹下，产生了函数内调用的类型，非本身类型')
 say_hello()
+print(say_hello.__name__)
