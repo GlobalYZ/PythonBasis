@@ -23,6 +23,6 @@ class Solution:
             j = j + 1
         nums1.sort()
         print(nums1)
-
+print("")
 test = Solution()
 test.merge([1,3,2,0,0,0,0],3,[2,2,3,7],4)
